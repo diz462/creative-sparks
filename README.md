@@ -24,6 +24,12 @@ I will continue to update this list.
 
 * [Markdown in VS Code](https://www.freecodecamp.org/news/how-to-use-markdown-in-vscode/) - Tutorial by freeCodeCamp.
 
+### Computer Science
+
+* [Intro to Discrete Math for CS](https://www.coursera.org/specializations/discrete-mathematics) - Coursera course from UC San Diego, recommended before taking Data Structures & Algorithms.
+
+* [Data Structures & Algorithms](https://www.coursera.org/specializations/data-structures-algorithms) - Coursera course from UC San Diego.
+
 ### Computer Vision
 
 * [First Principles of Computer Vision](https://fpcv.cs.columbia.edu/) - Lectures by Shree Nayar from Columbia University. It's better than any of the courses I've taken in grad school.
