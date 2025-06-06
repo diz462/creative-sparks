@@ -2,7 +2,7 @@
 
 I originally started this repository to learn and practice Git/GitHub. I also wanted to track my development progress while starting this journey into image processing and computer vision. There are so many things to learn that it's hard to know where to start if you don't have a computer science background or someone to guide you.
 
-I fell into this rabbit hole after taking an image processing course during grad school. This field is a limitless well of opportunity for those who may find themselves on the same journey. My aim for this repo is to provide a sandbox for those interested in medical image processing, computer vision, and/or deep learning. I hope that you find the same inspiration that I found using the resources below.  
+I fell into this rabbit hole after taking an image processing course during grad school. This field is a limitless well of opportunity for those who may find themselves on the same journey. My aim for this repo is to provide a sandbox for anyone interested in medical image processing, computer vision, and/or deep learning. I hope that you find the same inspiration that I found using the resources below.  
 
 ## Learning Resources
 
