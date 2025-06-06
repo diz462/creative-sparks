@@ -16,7 +16,7 @@ I will continue to update this list.
 
 ### Programming Languages
 
-* [Python Tutorial](https://youtu.be/t8pPdKYpowI?si=7jN4-_nY_vNRMvTV) - YouTube video by Nana. Also covers *PyCharm*. I prefer PyCharm if I'm coding with mainly Python.
+* [Python Tutorial](https://youtu.be/t8pPdKYpowI?si=7jN4-_nY_vNRMvTV) - YouTube video by Nana. Also covers *PyCharm*. I prefer PyCharm if I'm mainly coding in Python.
 
 * [Markdown Crash Course](https://youtu.be/_PPWWRV6gbA?si=BYYi4Sep-faI4HmK) - YouTube video by Web Dev Simplified.
 
