@@ -14,6 +14,12 @@ I will continue to update this list.
 
 * [Atlassian Git](https://www.atlassian.com/git)
 
+### Best Practices
+
+* [Coding & Comment Style](https://mitcommlab.mit.edu/broad/commkit/coding-and-comment-style/) - Helpful guidelines to improve your code.
+
+* [Coding Style & Structure Examples](https://github.com/mitcommlab/Coding-Documentation/tree/master) - Examples for writing better code and stucturing files.
+
 ### Python
 
 * [Python Tutorial](https://youtu.be/t8pPdKYpowI?si=7jN4-_nY_vNRMvTV) - YouTube video by Nana. Also covers *PyCharm*. I prefer PyCharm if I'm coding with mainly Python.
