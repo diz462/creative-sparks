@@ -12,7 +12,9 @@ I will continue to update this list.
 
 * [Git & GitHub Crash Course](https://youtu.be/RGOj5yH7evk?si=k4wBV5-vBJKGbdm0) - YouTube video from freeCodeCamp. Also covers *VS Code* which is very useful for writing different types of code without having to switch between IDEs. GitHub Copilot integration extremely helpful.
 
-* [Atlassian Git](https://www.atlassian.com/git) - Git cheat sheet.
+* [Atlassian Git](https://www.atlassian.com/git) - Git commands wiki style reference.
+
+* [Git Interactive](http://ndpsoftware.com/git-cheatsheet.html#loc=index;) - Git interactive cheat sheet.
 
 ### Best Practices
 
