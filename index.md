@@ -1,1 +1,4 @@
-Github pages test
+<!doctype html>
+<head>
+  <a href="https://diz462.github.io/">Link to Default Page</a>
+</head>
