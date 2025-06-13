@@ -8,7 +8,7 @@ I fell into this rabbit hole after taking an image processing course during grad
 
 ### Bone Pore Segmentation
 
-* [GitHub Pages Link](/creative-sparks/projects/bone-pore-segmentation.md)
+* [GitHub Pages Link](/projects/bone-pore-segmentation.md)
 
 ## Learning Resources
 
