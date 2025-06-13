@@ -28,7 +28,7 @@ I will continue to update this list.
 
 * [Coding Style & Structure Examples](https://github.com/mitcommlab/Coding-Documentation/tree/master) - Examples for writing better code and stucturing files.
 
-### Programming Languages
+### Languages
 
 * [Python Tutorial](https://youtu.be/t8pPdKYpowI?si=7jN4-_nY_vNRMvTV) - YouTube video by Nana. Also covers *PyCharm*. I prefer PyCharm if I'm mainly coding in Python.
 
@@ -36,6 +36,8 @@ I will continue to update this list.
 
 * [Markdown in VS Code](https://www.freecodecamp.org/news/how-to-use-markdown-in-vscode/) - Tutorial by freeCodeCamp.
 
+* [HTML Crash Course](https://www.freecodecamp.org/news/html-crash-course/) - HTML basics with a link in article that covers the relationship between HTML, CSS, and JS.
+  
 ### Computer Science
 
 * [Intro to Discrete Math for CS](https://www.coursera.org/specializations/discrete-mathematics) - Coursera course from UC San Diego, recommended before taking Data Structures & Algorithms.
