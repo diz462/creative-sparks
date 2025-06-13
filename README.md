@@ -1,3 +1,7 @@
-# Projects Test
+# Projects
+  
+## Bone Pore Segmentation
 
-## Bone Pore
+![Example Image](/assets/images/raw_image1_crop.png){:.image-small}
+
+* Identify bone pores in the cortical compartment of high resolution peripheral QCT images
