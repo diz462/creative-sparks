@@ -52,11 +52,30 @@
              border-bottom: none;
              }
 
+.image-preview {
+               display: block;
+               margin: 0 auto 0.5rem auto;
+               width: 80%;
+               max-width: 400px;
+               border-radius: 8px;
+               box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+               }
+
+
 section #title {
                margin-bottom: 10px;
                }
 h1, h2 {
-        border-bottom: 2px solid #ddd; 
-        padding-bottom: 0.3em;          
-        margin-bottom: 1em;
-       }
+   border-bottom: 2px solid #ddd; 
+   padding-bottom: 0.3em;          
+   margin-bottom: 1em;
+   }
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+   }
+
+ul li {
+      font-family: inherit; 
+      }
