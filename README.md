@@ -1,7 +1,11 @@
 # Projects
   
-## Bone Pore Segmentation
+![Example Image](/assets/images/raw_image1_crop.png){: .image-preview }
 
-![Example Image](/assets/images/raw_image1_crop.png){:.image-small}
+**Bone Pore Segmentation**
 
-* Identify bone pores in the cortical compartment of high resolution peripheral QCT images
+Goals: 
+* Identify bone pores in the cortical compartment from high resolution peripheral QCT images
+* Develop alternative methods that improve on traditional image processing techniques
+
+[View More](/projects/bone-pore-segmentation.md)
