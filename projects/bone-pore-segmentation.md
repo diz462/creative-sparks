@@ -2,7 +2,7 @@
 
 ![Raw Image1]({{ '/assets/images/raw_image1.png' | relative_url }}){: .image-preview }
 
-I started this project during an image processing class. The image above is a cross-sectional slice from a set of hr-pQCT images. 
+I started this project during an image processing class. The image above is a cross-sectional slice from a set of HR-pQCT images. 
 
 ![Cortical Mask]({{ '/assets/images/cortical_mask_image1.png' | relative_url }}){: .image-preview }
 
