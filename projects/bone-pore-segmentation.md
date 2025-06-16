@@ -4,7 +4,7 @@
 
 I started this project during an image processing class. The image above is a cross-sectional slice from a set of HR-pQCT images. 
 
-There are two main types of bone structure. Trabecular bone is the spongy inner region. Cortical bone is the dense exterior shell. The cortical compartment is defined by the image above. Within that compartment, the darker regions are bone pores, and they reduce cortical bone density which is a primary factor in bone strength.
+There are two main types of bone structure. Trabecular bone is the spongy inner region. Cortical bone is the dense exterior shell. The cortical compartment is defined by the image below. Within that compartment, the darker regions are bone pores, and they reduce cortical bone density which is a primary factor in bone strength.
 
 ![Cortical Mask]({{ '/assets/images/cortical_mask_image1.png' | relative_url }}){: .image-med}
 
