@@ -63,6 +63,15 @@
                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                }
 
+.image-med {
+               display: block;
+               margin: 0 auto 0.5rem auto;
+               width: 50%;
+               max-width: 400px;
+               max-height: 400px;
+               height: auto;
+               border-radius: 2px;
+               }
 
 section #title {
                margin-bottom: 10px;
