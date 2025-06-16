@@ -1,6 +1,6 @@
 # Projects
   
-[![Example Image]({{ '/assets/images/raw_image1_crop.png' | relative_url}})]({{ '/bone-pore-segmentation.md' | relative_url }}){: .image-preview }
+[![Example Image]({{ '/assets/images/raw_image1_crop.png' | relative_url}})]({{ '/projects/bone-pore-segmentation.md' | relative_url }}){: .image-preview }
 
 **[Bone Pore Segmentation](/projects/bone-pore-segmentation.md)**
 
