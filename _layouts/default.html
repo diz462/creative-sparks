@@ -36,7 +36,11 @@
 
       <section>
         <div id="title">
+          {% if page.url contains 'projects' %}
+          <h1>{{ page.path | split: '/' | last | split: '.' | first | replace: '-', ' ' | capitalize }}</h1>
+          {% else %}
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          {% endif %}
           <p>{{ site.tagline | default: site.description | default: site.github.project_tagline }}</p>         
         </div>
 
