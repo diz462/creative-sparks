@@ -10,7 +10,10 @@ There are two main types of bone structure. Trabecular bone is the spongy inner 
 
 # Approach
 
-My approach was to try several different segmentation techniques and continue working on the ones with the highest potential. I started with thresholding like Otsu's, then moved on to Canny and Laplacian of Gaussian (LoG). Otsu's had the worst results but the highest potential due to thresholding working as a pseudo filter. Canny was slightly better with adjustments, while LoG showed high potential. 
+My approach was to try several different segmentation techniques and continue working on the ones with the highest potential. I started with thresholding like Otsu's, then moved on to Canny and Laplacian of Gaussian (LoG). Otsu's had the worst results but the highest potential due to thresholding acting as a filter. Canny was slightly better with adjustments, while LoG showed high potential. 
 
 ![Canny]({{ '/assets/images/canny.png' | relative_url }}){: .image-preview }
 ![LoG]({{ '/assets/images/log.png' | relative_url }}){: .image-preview }
+
+# Methods
+![Construction]({{ '/assets/images/construction-sign.png' | relative_url }}){: .image-preview }
