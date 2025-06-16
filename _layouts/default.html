@@ -42,7 +42,6 @@
             | last
             | remove: '.md'
             | split: '-'
-            | map: 'capitalize'
             | join: ' '}}</h1>
           {% else %}
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
