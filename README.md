@@ -1,6 +1,6 @@
 # Projects
   
-[![Example Image](/assets/images/raw_image1_crop.png)](/projects/bone-pore-segmentation.md){: .image-preview }
+[![Example Image](/assets/images/raw_image1_crop.png)](/bone-pore-segmentation.md){: .image-preview }
 
 **[Bone Pore Segmentation](/projects/bone-pore-segmentation.md)**
 
