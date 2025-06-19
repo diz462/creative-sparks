@@ -31,15 +31,18 @@ Then, I mapped the values to grayscale, constructed a histogram, and applied ima
 
 ### Histograms
 
-* *Original Image*
+* *Original Image Mask*
 ![Og Histogram]({{ '/assets/images/og_hist.png' | relative_url }}){: .image-med}
 
-* *Equalized Image*
+* *Equalized Image Mask*
 ![Eq Histogram]({{ '/assets/images/eq_hist.png' | relative_url }}){: .image-med}
 
 This improved contrast but didn't noticibly improve the areas surrounding darker regions. Ultimately, I abandoned this idea to preserve the original values.
 
-* *Equalized Image*
+* *Original Image Mask*
+![Image Mask]({{ '/assets/images/image_mask.png' | relative_url }}){: .image-med}
+
+* *Equalized Image Mask*
 ![Eq Mask]({{ '/assets/images/eq-image-mask.png' | relative_url }}){: .image-med}
 
 Next, I applied basic methods like Otsu's, then moved on to Canny and Laplacian of Gaussian (LoG). Otsu's missed many of the large pores but showed high potential when applied to the equalized mask using local thresholding.
