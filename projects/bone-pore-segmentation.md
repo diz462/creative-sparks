@@ -55,7 +55,7 @@ ima_bin_adapt = imbinarize(ima_mask_eq,ima_adapt);
 * *Equalized Image*
 ![Og Otsu's]({{ '/assets/images/eq_otsu.png' | relative_url }}){: .image-med}
 
-* *Local With Equalized Image*
+* *Equalized Image with Local Thresholding*
 ![Og Otsu's]({{ '/assets/images/eq_otsu_local.png' | relative_url }}){: .image-med}
 
 Canny edge detection was slightly better than the original Otsu but still not great even after adjusting high and low thresholds.
@@ -65,10 +65,12 @@ canny = edge(ima_mask,'canny', 0.4, 0.5);
 canny = bwareaopen(imfill(canny,'holes'),50);
 ~~~
 
+* *Canny*
 ![Canny]({{ '/assets/images/canny.png' | relative_url }}){: .image-med}
 
 LoG also showed potential but needs a significant amount of additional work.
 
+* *LoG*
 ![LoG]({{ '/assets/images/log.png' | relative_url }}){: .image-med }
 
 ## Method 1
