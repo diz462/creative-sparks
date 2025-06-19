@@ -79,6 +79,14 @@ canny = bwareaopen(imfill(canny,'holes'),50);
 
 LoG also showed potential but needs a significant amount of additional work.
 
+~~~matlab
+lap = 4*del2(ima_mask);
+kernel = [0   1   0
+          1  -4   1
+          0   1   0];
+laplacian = conv2(lap, kernel, 'same');
+~~~
+
 * *LoG*
 ![LoG]({{ '/assets/images/log.png' | relative_url }}){: .image-med }
 
