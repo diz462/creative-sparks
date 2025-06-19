@@ -29,10 +29,14 @@ ima_mask = reshape(ima_mask,M,N);
 
 Then, I mapped the values to grayscale. I constructed a histogram and applied image equalization. This improved contrast but didn't noticibly improve the areas surrounding darker regions. Ultimately, I abandoned this idea to preserve the original values.
 
+*Original Image*
 ![Og Histogram]({{ '/assets/images/og_hist.png' | relative_url }}){: .image-med}
+
+*Equalized Image*
 ![Eq Histogram]({{ '/assets/images/eq_hist.png' | relative_url }}){: .image-med}
 
-![Eq Mask]({{ '/assets/images/cortical_mask_image1.png' | relative_url }}){: .image-med}
+*Equalized Image*
+![Eq Mask]({{ '/assets/images/eq-image-mask.png' | relative_url }}){: .image-med}
 
 Next, I applied basic methods like Otsu's, then moved on to Canny and Laplacian of Gaussian (LoG). Otsu's missed many of the large pores but showed high potential when applied to the equalized mask and using local thresholding.
 
@@ -45,10 +49,13 @@ ima_adapt = adaptthresh(ima_mask_eq,0.8);
 ima_bin_adapt = imbinarize(ima_mask_eq,ima_adapt);
 ~~~
 
+*Original Image*
 ![Og Otsu's]({{ '/assets/images/otsu.png' | relative_url }}){: .image-med}
 
+*Equalized Image*
 ![Og Otsu's]({{ '/assets/images/eq_otsu.png' | relative_url }}){: .image-med}
 
+*Local With Equalized Image*
 ![Og Otsu's]({{ '/assets/images/eq_otsu_local.png' | relative_url }}){: .image-med}
 
 Canny edge detection was slightly better than the original Otsu but still not great even after adjusting high and low thresholds.
