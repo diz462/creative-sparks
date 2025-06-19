@@ -27,13 +27,17 @@ ima_mask = reshape(ima_mask,M,N);
 
 ![Image Mask]({{ '/assets/images/image_mask.png' | relative_url }}){: .image-med}
 
-Then, I mapped the values to grayscale. I constructed a histogram and applied image equalization. This improved contrast but didn't noticibly improve the areas surrounding darker regions. Ultimately, I abandoned this idea to preserve the original values.
+Then, I mapped the values to grayscale, constructed a histogram, and applied image equalization. 
+
+### Histograms
 
 * *Original Image*
 ![Og Histogram]({{ '/assets/images/og_hist.png' | relative_url }}){: .image-med}
 
 * *Equalized Image*
 ![Eq Histogram]({{ '/assets/images/eq_hist.png' | relative_url }}){: .image-med}
+
+This improved contrast but didn't noticibly improve the areas surrounding darker regions. Ultimately, I abandoned this idea to preserve the original values.
 
 * *Equalized Image*
 ![Eq Mask]({{ '/assets/images/eq-image-mask.png' | relative_url }}){: .image-med}
@@ -48,6 +52,8 @@ ima_bin = imbinarize(ima_mask_eq);
 ima_adapt = adaptthresh(ima_mask_eq,0.8);
 ima_bin_adapt = imbinarize(ima_mask_eq,ima_adapt);
 ~~~
+
+### Otsu's
 
 * *Original Image*
 ![Og Otsu's]({{ '/assets/images/otsu.png' | relative_url }}){: .image-med}
