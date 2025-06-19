@@ -12,7 +12,7 @@ There are two general types of bone structure. Trabecular bone is the spongy inn
 
 ## Approach
 
-The raw image data contains a large range of negative and positive values. Negative values indicate loss in bone density so my first thought was to use a filter that removed all positive values. Unfortunately, this was likely the original method that was used and wasn't very accurate (shows that negative values aren't the sole indicator for bone pores).
+The raw image data contains a large range of negative and positive values. Negative values indicate loss in bone density so my first thought was to use a filter that removed all positive values. Unfortunately, this was likely the original method used and wasn't very accurate (shows that negative values aren't the sole indicator for bone pores).
 
 First, I transferred the image values defined by the cortical mask to construct an image mask.
 
