@@ -38,7 +38,7 @@ Then, I mapped the values to grayscale. I constructed a histogram and applied im
 * *Equalized Image*
 ![Eq Mask]({{ '/assets/images/eq-image-mask.png' | relative_url }}){: .image-med}
 
-Next, I applied basic methods like Otsu's, then moved on to Canny and Laplacian of Gaussian (LoG). Otsu's missed many of the large pores but showed high potential when applied to the equalized mask and with local thresholding.
+Next, I applied basic methods like Otsu's, then moved on to Canny and Laplacian of Gaussian (LoG). Otsu's missed many of the large pores but showed high potential when applied to the equalized mask using local thresholding.
 
 ~~~matlab
 % Otsu
