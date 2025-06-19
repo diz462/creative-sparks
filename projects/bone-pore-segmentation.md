@@ -63,14 +63,11 @@ Canny edge detection was slightly better than the original Otsu but still not gr
 ~~~matlab
 canny = edge(ima_mask,'canny', 0.4, 0.5);
 canny = bwareaopen(imfill(canny,'holes'),50);
-figure
-imshow(canny);
-axis equal
 ~~~
 
 ![Canny]({{ '/assets/images/canny.png' | relative_url }}){: .image-med}
 
-LoG also showed potential but required a significant amount of additional work.
+LoG also showed potential but needs a significant amount of additional work.
 
 ![LoG]({{ '/assets/images/log.png' | relative_url }}){: .image-med }
 
