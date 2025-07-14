@@ -27,7 +27,7 @@ ima_mask = reshape(ima_mask,M,N);
 
 ![Image Mask]({{ '/assets/images/image_mask.png' | relative_url }}){: .image-med}
 
-Then, I mapped the values to grayscale, constructed a histogram, and applied image equalization. 
+Then, I mapped the values to grayscale, constructed a histogram, and applied image equalization.
 
 ### Histograms
 
@@ -56,7 +56,7 @@ ima_adapt = adaptthresh(ima_mask_eq,0.8);
 ima_bin_adapt = imbinarize(ima_mask_eq,ima_adapt);
 ~~~
 
-### Otsu's
+### Otsu's Method
 
 * *Original Image*
 ![Og Otsu's]({{ '/assets/images/otsu.png' | relative_url }}){: .image-med}
@@ -67,7 +67,9 @@ ima_bin_adapt = imbinarize(ima_mask_eq,ima_adapt);
 * *Equalized Image with Local Thresholding*
 ![Og Otsu's]({{ '/assets/images/eq_otsu_local.png' | relative_url }}){: .image-med}
 
-Canny edge detection was slightly better than the original Otsu but still not great even after adjusting high and low thresholds.
+### Canny Edge Detection
+
+Canny was slightly better than the original Otsu but still not great even after adjusting high and low thresholds.
 
 ~~~matlab
 canny = edge(ima_mask,'canny', 0.4, 0.5);
@@ -76,6 +78,8 @@ canny = bwareaopen(imfill(canny,'holes'),50);
 
 * *Canny*
 ![Canny]({{ '/assets/images/canny.png' | relative_url }}){: .image-med}
+
+### Laplacian of Gaussian
 
 LoG also showed potential but needs a significant amount of additional work.
 
@@ -89,6 +93,112 @@ laplacian = conv2(lap, kernel, 'same');
 
 * *LoG*
 ![LoG]({{ '/assets/images/log.png' | relative_url }}){: .image-med }
+
+### \*Update 1\*
+
+After looking at this again, a lot of things went wrong here.
+
+$LoG(f) = ∇^2(G∗f)$
+
+Where, $G$ is the Gaussian kernel, $*$ is convolution, and $∇^2$ is the Laplacian operator.
+
+What I did:
+
+$LoG(f) = G*(∇^2f)$
+
+The order of operations aren't commutative, and I applied the Laplacian a second time instead of the Gaussian kernel (sorry professor:disappointed:).
+
+#### Gaussian Blur
+
+I applied a Gaussian blur using sigma values: 0.25, 0.75, 1.25, 1.75
+
+~~~matlab
+sigma = [0.25:0.5:1.75];
+
+gaussian_blur = zeros(M,N,length(sigma));
+for ii = 1:length(sigma)
+    gaussian_blur(:,:,ii) = imgaussfilt(ima_mask_gray,sigma(ii));
+end
+~~~
+
+![gaussian-montage]({{ '/assets/images/gaussian-blur.jpg' | relative_url }}){: .image-med }
+
+#### Laplacian Operator
+
+After further reading, del2 is a discrete Laplacian operator that uses approximations to improve performance. I was curious how it compared to conv2 which actually performs convolution using a kernel and how changing that kernel from 4 to 8 adjacent neighbors affects the sharpened image.
+
+* *Original Grayscale*
+![grayscale]({{ '/assets/images/grayscale.jpg' | relative_url }}){: .image-med }
+
+~~~matlab
+discrete_lap = zeros(M,N,length(sigma));
+for ii = 1:length(sigma)
+    discrete_lap(:,:,ii) = 4*del2(gaussian_blur(:,:,ii));
+end
+~~~
+
+* *Discrete Laplacian*
+![discrete]({{ '/assets/images/discrete-log.jpg' | relative_url }}){: .image-med }
+
+~~~matlab
+kernel_4n = [0  1  0
+             1 -4  1
+             0  1  0];
+
+lap_4n = zeros(M,N,length(sigma)); 
+for ii = 1:length(sigma)
+    lap_4n(:,:,ii) = conv2(gaussian_blur(:,:,ii), kernel_4n,"same");
+end             
+~~~
+
+* *4n Laplacian*
+![discrete]({{ '/assets/images/discrete-log.jpg' | relative_url }}){: .image-med }
+
+~~~matlab
+kernel_8n = [1  1  1
+             1 -8  1
+             1  1  1];
+
+lap_8n = zeros(M,N,length(sigma)); 
+for ii = 1:length(sigma)
+    lap_8n(:,:,ii) = conv2(gaussian_blur(:,:,ii), kernel_8n,"same");
+end
+~~~
+
+* *8n Laplacian*
+![discrete]({{ '/assets/images/discrete-log.jpg' | relative_url }}){: .image-med }
+
+#### Image Sharpening
+
+In order to sharpen the grayscale image mask, I subtracted the LoG images (subtract if center kernel is negative, add if positive).
+
+* *Original Grayscale*
+![grayscale]({{ '/assets/images/grayscale.jpg' | relative_url }}){: .image-med }
+
+* *Sharpened Discrete*
+![sharp-discrete]({{ '/assets/images/sharp-log-discrete.jpg' | relative_url }}){: .image-med }
+
+* *Sharpened 4n*
+![sharp-4n]({{ '/assets/images/sharp-log-4n.jpg' | relative_url }}){: .image-med }
+
+* *Sharpened 8n*
+![sharp-8n]({{ '/assets/images/sharp-log-8n.jpg' | relative_url }}){: .image-med }
+
+~~~matlab
+% Discrete
+for ii = 1:length(sigma)
+    sharp_dis(:,:,ii) = ima_mask_gray - discrete_lap(:,:,ii);
+end
+
+% Convolutions
+for ii = 1:length(sigma)
+    sharp_4n(:,:,ii) = ima_mask_gray - lap_4n(:,:,ii);
+end
+
+for ii = 1:length(sigma)
+    sharp_8n(:,:,ii) = ima_mask_gray - lap_8n(:,:,ii);
+end
+~~~
 
 ## Method 1
 
