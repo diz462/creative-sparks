@@ -129,7 +129,7 @@ end
 
 #### Laplacian Operator
 
-After digging a bit deeper, `del2` aproximates the Laplacian to improve performance. I was curious how it compared to `conv2` which actually convolves the Laplacian kernel and how changing that kernel from 4 to 8 adjacent neighbors affects the sharpened image.
+After digging a bit deeper, `del2` approximates the Laplacian to improve performance. I was curious how it compared to `conv2` which actually convolves the Laplacian kernel and how changing that kernel from 4 to 8 adjacent neighbors affects the sharpened image.
 
 ~~~matlab
 discrete_lap = zeros(M,N,length(sigma));
