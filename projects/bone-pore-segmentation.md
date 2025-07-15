@@ -122,7 +122,7 @@ end
 ~~~
 
 * *Grayscale*
-![grayscale]({{ '/assets/images/grayscale.jpg' | relative_url }}){: .image-lg }
+![grayscale]({{ '/assets/images/grayscale.jpg' | relative_url }}){: .image-med }
 
 * *Gaussian*
 ![gaussian-montage]({{ '/assets/images/gaussian-blur.jpg' | relative_url }}){: .image-montage }
