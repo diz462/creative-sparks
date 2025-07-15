@@ -100,7 +100,7 @@ After looking at this again, a lot of things went wrong here.
 
 $$LoG(f) = ∇^2(G∗f)$$
 
-Where, \(G\) is the Gaussian kernel, \(*\) is convolution, and \(∇^2\) is the Laplacian operator.
+Where, \\(G\\) is the Gaussian kernel, \\(*\\) is convolution, and \\(∇^2\\) is the Laplacian operator.
 
 What I did:
 
@@ -139,7 +139,7 @@ end
 ~~~
 
 * *Discrete Laplacian*
-![discrete]({{ '/assets/images/discrete-log.jpg' | relative_url }}){: .image-montage }
+![Laplacian discrete]({{ '/assets/images/discrete-log.jpg' | relative_url }}){: .image-montage }
 
 ~~~matlab
 kernel_4n = [0  1  0
@@ -153,7 +153,7 @@ end
 ~~~
 
 * *4n Laplacian*
-![discrete]({{ '/assets/images/discrete-log.jpg' | relative_url }}){: .image-montage }
+![Laplacian 4n]({{ '/assets/images/log_4n.jpg' | relative_url }}){: .image-montage }
 
 ~~~matlab
 kernel_8n = [1  1  1
@@ -167,7 +167,7 @@ end
 ~~~
 
 * *8n Laplacian*
-![discrete]({{ '/assets/images/discrete-log.jpg' | relative_url }}){: .image-montage }
+![Laplacian 8n]({{ '/assets/images/log_8n.jpg' | relative_url }}){: .image-montage }
 
 #### Image Sharpening
 
