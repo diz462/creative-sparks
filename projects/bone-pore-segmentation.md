@@ -98,15 +98,15 @@ laplacian = conv2(lap, kernel, 'same');
 
 After looking at this again, a lot of things went wrong here.
 
-$LoG(f) = ∇^2(G∗f)$
+$$LoG(f) = ∇^2(G∗f)$$
 
-Where, $G$ is the Gaussian kernel, $*$ is convolution, and $∇^2$ is the Laplacian operator.
+Where, \(G\) is the Gaussian kernel, \(*\) is convolution, and \(∇^2\) is the Laplacian operator.
 
 What I did:
 
-$LoG(f) = G*(∇^2f)$
+$$LoG(f) = G*(∇^2f)$$
 
-The order of operations aren't commutative, and I applied the Laplacian a second time instead of the Gaussian kernel (sorry professor:disappointed:).
+The order of operations isn't commutative, and I applied the Laplacian a second time instead of the Gaussian kernel (sorry professor:disappointed:).
 
 #### Gaussian Blur
 
@@ -129,7 +129,7 @@ end
 
 #### Laplacian Operator
 
-After further reading, del2 is a discrete Laplacian operator that uses approximations to improve performance. I was curious how it compared to conv2 which actually performs convolution using a kernel and how changing that kernel from 4 to 8 adjacent neighbors affects the sharpened image.
+After digging a bit deeper, `del2` aproximates the Laplacian to improve performance. I was curious how it compared to `conv2` which actually convolves the Laplacian kernel and how changing that kernel from 4 to 8 adjacent neighbors affects the sharpened image.
 
 ~~~matlab
 discrete_lap = zeros(M,N,length(sigma));
