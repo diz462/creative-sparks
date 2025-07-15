@@ -121,14 +121,15 @@ for ii = 1:length(sigma)
 end
 ~~~
 
+* *Grayscale*
+![grayscale]({{ '/assets/images/grayscale.jpg' | relative_url }}){: .image-lg }
+
+* *Gaussian*
 ![gaussian-montage]({{ '/assets/images/gaussian-blur.jpg' | relative_url }}){: .image-montage }
 
 #### Laplacian Operator
 
 After further reading, del2 is a discrete Laplacian operator that uses approximations to improve performance. I was curious how it compared to conv2 which actually performs convolution using a kernel and how changing that kernel from 4 to 8 adjacent neighbors affects the sharpened image.
-
-* *Original Grayscale*
-![grayscale]({{ '/assets/images/grayscale.jpg' | relative_url }}){: .image-lg }
 
 ~~~matlab
 discrete_lap = zeros(M,N,length(sigma));
