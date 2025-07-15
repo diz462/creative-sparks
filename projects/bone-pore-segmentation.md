@@ -174,7 +174,7 @@ end
 In order to sharpen the grayscale image mask, I subtracted the LoG images (subtract if center kernel is negative, add if positive).
 
 * *Original Grayscale*
-![grayscale]({{ '/assets/images/grayscale.jpg' | relative_url }}){: .image-lg }
+![grayscale]({{ '/assets/images/grayscale.jpg' | relative_url }}){: .image-med}
 
 * *Sharpened Discrete*
 ![sharp-discrete]({{ '/assets/images/sharp-log-discrete.jpg' | relative_url }}){: .image-montage }
