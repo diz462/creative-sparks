@@ -106,7 +106,7 @@ What I did:
 
 $$LoG(f) = G*(∇^2f)$$
 
-The order of operations isn't commutative, and I applied the Laplacian a second time instead of the Gaussian kernel (sorry professor :disappointed:).
+The order of operations isn't commutative, and I applied the Laplacian a second time instead of the Gaussian kernel (sorry professor {%:disappointed:%}).
 
 #### Gaussian Blur
 
@@ -153,7 +153,7 @@ end
 ~~~
 
 * *4n Laplacian*
-![Laplacian 4n]({{ '/assets/images/log_4n.jpg' | relative_url }}){: .image-montage }
+![Laplacian 4n]({{ '/assets/images/log-4n.jpg' | relative_url }}){: .image-montage }
 
 ~~~matlab
 kernel_8n = [1  1  1
@@ -167,7 +167,7 @@ end
 ~~~
 
 * *8n Laplacian*
-![Laplacian 8n]({{ '/assets/images/log_8n.jpg' | relative_url }}){: .image-montage }
+![Laplacian 8n]({{ '/assets/images/log-8n.jpg' | relative_url }}){: .image-montage }
 
 #### Image Sharpening
 
