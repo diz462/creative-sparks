@@ -100,7 +100,7 @@ After looking at this again, a lot of things went wrong here.
 
 $$LoG(f) = ∇^2(G∗f)$$
 
-Where, {% \\(G\\) %} is the Gaussian kernel, {% \\(*\\) %} is convolution, and {% \\(∇^2\\) %} is the Laplacian operator.
+Where, \( G \) is the Gaussian kernel, \( * \) is convolution, and \( ∇^2 \) is the Laplacian operator.
 
 What I did:
 
