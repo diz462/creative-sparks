@@ -1,7 +1,6 @@
-% BONE_PORE_SEG_FINAL  - MATLAB code for bone pore segmentation project.
+% BONE_PORE_SEG  - MATLAB code for bone pore segmentation project.
 %    
-%    This code performs segmentation of bone pores using multithresholding and
-%    variable adjusted thresholding method.
+%    This code performs segmentation of bone pores using multithresholding.
 
 clc
 clear all
