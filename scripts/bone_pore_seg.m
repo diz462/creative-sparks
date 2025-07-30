@@ -88,40 +88,6 @@ figure
 imshow(g);
 figure
 imshowpair(bone_pores,mask_g,'montage');
-%% Hole Punch
-
-figure
-surf(ima_mask)
-hold on
-imagesc(ima_mask)
-colorbar
-
-ima_mask_inv = ima_mask*-1;
-figure
-surf(ima_mask_inv)
-peak2 = zeros(M,N);
-
-for ii = 1:N
-[peak,pos] = findpeaks(ima_mask_inv(:,ii));
-number_peaks = length(peak);
-    for jj = 1:number_peaks
-        peak2(pos(jj),ii) = peak(jj);
-    end
-end
-
-min_peak = max(max(peak2));
-
-ima_mask_adjusted = ima_mask;
-background_height = min_peak;
-ima_mask_adjusted(ima_mask_adjusted==0) = background_height; 
-figure
-surf(ima_mask_adjusted)
-
-ima_mask_adjusted(ima_mask_adjusted>=background_height) = 0;
-ima_mask_adjusted(ima_mask_adjusted~=0) = 255;
-
-figure
-imshow(ima_mask_adjusted)
 
 %% Comparisons
 
@@ -133,13 +99,3 @@ figure
 imshowpair(ima_mask_gray,bone_pores);
 axis equal
 title("Method 1")
-
-figure
-imshowpair(ima_mask_gray,ima_mask_adjusted);
-axis equal
-title("Method 2")
-
-figure
-imshowpair(bone_pores,ima_mask_adjusted);
-axis equal
-title("Method 1 vs 2")
