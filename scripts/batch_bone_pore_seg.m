@@ -47,35 +47,6 @@ for ii=1:num_rand_ima
 
     ima_mask_og(:,:,ii) = ima_mask;
 
-    % Variable Thresholding Method 2
-        % nested within loop to use same variable names from original code
-
-    % Find minimum negative peak 
-    ima_mask_inv = ima_mask*-1;
-
-        for jj = 1:N
-
-            [peak,pos] = findpeaks(ima_mask_inv(:,jj));
-            number_peaks = length(peak);
-
-            for kk = 1:number_peaks
-
-                    peak2(pos(kk),jj) = peak(kk);
-            end
-        end
-
-    min_peak = max(max(peak2));
-
-    % Set background height to min negative peak value
-    ima_mask_adjusted = ima_mask;
-    background_height = min_peak;
-    ima_mask_adjusted(ima_mask_adjusted==0) = background_height; 
-    ima_mask_adjusted(ima_mask_adjusted>=background_height) = 0;
-    ima_mask_adjusted(ima_mask_adjusted~=0) = 1;
-     
-    ima_mask_adjusted2(:,:,ii) = ima_mask_adjusted;
-    ima_mask_gray(:,:,ii) = mat2gray(ima_mask);
-
 end
 
 %% Rescale Image Values
